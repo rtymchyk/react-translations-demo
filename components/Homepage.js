@@ -1,6 +1,5 @@
 import React from 'react';
-import { Message } from '../../react-translations/built.js';
-import { _ } from '../../react-translations/built.js'
+import { _, Message } from '../../react-translations/built.js';
 
 const Homepage = (props, { locale }) => {
   function onLocaleSwitch() {
