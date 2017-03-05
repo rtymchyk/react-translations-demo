@@ -1,0 +1,24 @@
+body {
+  padding: 50px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.large {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+#locale-button {
+  font-size: 40px;
+  margin: 50px 0 50px 0;
+}
+
+span.localized-string {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+}
+
+a {
+  color: #00B7FF;
+}

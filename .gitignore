@@ -1,3 +1,6 @@
+locales/*.json
+public/javascripts/app.js
+
 # Logs
 logs
 *.log
