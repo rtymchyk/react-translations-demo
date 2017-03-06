@@ -3,7 +3,7 @@ import { _, Message } from '../../react-translations/built.js';
 
 const Homepage = (props, { locale }) => {
   function onLocaleSwitch() {
-    window.localtion.href = locale === 'en-US' ? '/fr' : '/en-US';
+    window.location.href = locale === 'en-US' ? '/fr/demo' : '/en-US/demo';
   }
 
   return (
@@ -28,7 +28,12 @@ const Homepage = (props, { locale }) => {
         comment="Here's a comment for the translator" />
       {/* Short form */}
       <Message i18n={_('Hey {name}!')} name="Bob" />
-      <button onClick={onLocaleSwitch} id="locale-button">😆</button>
+
+      <button
+        onClick={onLocaleSwitch}
+        id="locale-button">
+        {locale === 'en-US' ? '→ fr' : '→ en-US'}
+      </button>
     </div>
   );
 };

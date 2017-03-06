@@ -6,19 +6,28 @@ import { _ } from '../../react-translations/built.js';
 
 const router = express.Router();
 
-const ALLOWED_LOCALES = ['en-US', 'fr'];
-
 router.get('/', (req, res, next) => {
-  res.redirect('/en-US');
+  res.redirect('/demo');
 });
 
-router.get('/:locale', (req, res, next) => {
-  let { locale } = req.params;
-  if (!ALLOWED_LOCALES.includes(locale)) locale = 'en-US';
+router.get('/:locale/demo', (req, res, next) => {
+  const { locale, messages } = req;
 
-  const app = renderToString(<App locale={locale} />);
+  let resolvedMessages = {};
+  if (locale !== 'en-US') {
+    resolvedMessages = {
+      domain: locale,
+      locale_data: {},
+    };
+    resolvedMessages.locale_data[locale] = messages;
+  }
 
-  res.render('index', { locale, title: _('This is a title!')(locale), app });
+  res.render('index', {
+    title: _('This is a title!')(locale),
+    app: renderToString(<App locale={locale} />),
+    locale,
+    messages: JSON.stringify(resolvedMessages),
+  });
 });
 
 module.exports = router;
