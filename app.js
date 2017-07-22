@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const index = require('./routes/index');
 const localizer = require('./middleware/localizer').default;
 const messages = require('./initializers/messages').default;
-const { setMessages } = require('../react-translations/built.js');
+const { setMessages } = require('react-translations');
 
 const app = express();
 

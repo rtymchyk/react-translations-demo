@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../components/App';
-import { setMessages } from '../../react-translations/built.js';
+import App from 'components/App';
+import { setMessages } from 'react-translations';
 
 const locale = document.documentElement.getAttribute('lang');
 const messages = document.getElementById('messages');

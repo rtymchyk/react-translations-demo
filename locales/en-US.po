@@ -3,19 +3,19 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2017-03-05T20:48:34.717Z\n"
+"PO-Revision-Date: 2017-07-22T20:05:27.678Z\n"
 
-#: components/Homepage.js
+#: src/components/Homepage.js
 msgid "react-translations Demo"
 msgstr ""
 
-#: components/Homepage.js
+#: src/components/Homepage.js
 msgid "You have one cat!"
 msgid_plural "You have {numCats} cats!"
 msgstr[0] ""
 msgstr[1] ""
 
-#: components/Homepage.js
+#: src/components/Homepage.js
 msgid "Hey {name}!"
 msgstr ""
 
@@ -23,12 +23,12 @@ msgstr ""
 msgid "This is a title!"
 msgstr ""
 
-#: components/Homepage.js
+#: src/components/Homepage.js
 msgctxt "Homepage"
 msgid "Hello World!"
 msgstr ""
 
-#: components/Homepage.js
+#: src/components/Homepage.js
 #. Here's a comment for the translator
 msgctxt "Homepage"
 msgid "You have {numCats} car!"

@@ -1,6 +1,7 @@
 const messages = require('../initializers/messages').default;
 
 export default function(req, res, next) {
+  const DEFAULT_LOCALE = 'en-US'
   const ALLOWED_LOCALES = ['en-US', 'fr'];
   const path = req.path;
 
@@ -12,7 +13,7 @@ export default function(req, res, next) {
     }
   });
 
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  req.locale = DEFAULT_LOCALE
+  req.messages = messages().locale_data[DEFAULT_LOCALE];
+  next();
 }

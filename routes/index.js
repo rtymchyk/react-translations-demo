@@ -1,16 +1,12 @@
 import express from 'express';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
-import App from '../components/App';
-import { _ } from '../../react-translations/built.js';
+import App from '../src/components/App';
+import { _ } from 'react-translations';
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  res.redirect('/demo');
-});
-
-router.get('/:locale/demo', (req, res, next) => {
+router.get('/:locale?', (req, res, next) => {
   const { locale, messages } = req;
 
   let resolvedMessages = {};

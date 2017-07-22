@@ -6,7 +6,7 @@ const LOCALES_DIR = 'locales/';
 const JED_FORMAT = 'jed1.x';
 
 gulp.task('extract-strings', () => {
-  return gulp.src(['components/*.js', 'routes/*.js'])
+  return gulp.src(['src/components/*.js', 'routes/*.js'])
     .pipe(babel({
       plugins: ['syntax-jsx', ['babel-extract-gettext', {
         outputFile: 'locales/en-US.po',
@@ -25,17 +25,17 @@ gulp.task('extract-strings', () => {
     }));
 });
 
-gulp.task('build-fr', () => {
+gulp.task('import-fr', () => {
   return gulp.src(['locales/fr.po'])
           .pipe(po2json({ format: JED_FORMAT, domain: 'fr' }))
           .pipe(gulp.dest(LOCALES_DIR));
 });
 
 
-gulp.task('build-en-US', () => {
+gulp.task('import-en-US', () => {
   return gulp.src(['locales/en-US.po'])
           .pipe(po2json({ format: JED_FORMAT, domain: 'en-US' }))
           .pipe(gulp.dest(LOCALES_DIR));
 });
 
-gulp.task('build-strings', ['build-en-US', 'build-fr']);
+gulp.task('import-strings', ['import-en-US', 'import-fr']);
