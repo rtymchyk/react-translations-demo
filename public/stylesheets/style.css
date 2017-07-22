@@ -8,7 +8,7 @@ body {
   margin-bottom: 50px;
 }
 
-#locale-button {
+.locale-button {
   font-size: 40px;
   margin: 50px 0 50px 0;
   outline: none;
@@ -18,7 +18,7 @@ body {
   padding: 12px;
 }
 
-#locale-button:hover {
+.locale-button:hover {
   border-color: tomato;
   color: tomato;
 }

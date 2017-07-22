@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { _, Message } from 'react-translations'
 
-export default function Homepage ({ locale }) {
+export default function Homepage (props, { locale }) {
   function handleButtonClick () {
     /**
      * If you are wondering why this is a hard refresh, it's because 
@@ -40,7 +40,7 @@ export default function Homepage ({ locale }) {
 
       <button
         onClick={handleButtonClick}
-        id="locale-button">
+        className="locale-button">
         {locale === 'en-US' ? '→ fr' : '→ en-US'}
       </button>
     </div>
