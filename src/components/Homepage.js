@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { _, Message } from 'react-translations';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { _, Message } from 'react-translations'
 
 const Homepage = (props, { locale }) => {
-  function onLocaleSwitch() {
-    window.location.href = locale === 'en-US' ? '/fr' : '/en-US';
+  function onLocaleSwitch () {
+    window.location.href = locale === 'en-US' ? '/fr' : '/en-US'
   }
 
   return (
@@ -36,11 +36,11 @@ const Homepage = (props, { locale }) => {
         {locale === 'en-US' ? '→ fr' : '→ en-US'}
       </button>
     </div>
-  );
-};
+  )
+}
 
 Homepage.contextTypes = {
   locale: PropTypes.string.isRequired,
-};
+}
 
-export default Homepage;
+export default Homepage

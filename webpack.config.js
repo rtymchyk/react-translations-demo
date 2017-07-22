@@ -8,7 +8,7 @@ module.exports = {
     filename: './public/javascripts/[name].js',
   },
   resolve: {
-    modules: ['node_modules', path.resolve(__dirname, 'src')]
+    modules: ['node_modules', path.resolve(__dirname, 'src')],
   },
   module: {
     rules: [
@@ -18,7 +18,7 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
         }],
-      }
-    ]
+      },
+    ],
   },
-};
+}

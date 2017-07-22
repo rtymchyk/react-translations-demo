@@ -1,21 +1,21 @@
-import express from 'express';
-import { renderToString } from 'react-dom/server';
-import React from 'react';
-import App from '../src/components/App';
-import { _ } from 'react-translations';
+import express from 'express'
+import { renderToString } from 'react-dom/server'
+import React from 'react'
+import App from '../src/components/App'
+import { _ } from 'react-translations'
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/:locale?', (req, res, next) => {
-  const { locale, messages } = req;
+  const { locale, messages } = req
 
-  let resolvedMessages = {};
+  let resolvedMessages = {}
   if (locale !== 'en-US') {
     resolvedMessages = {
       domain: locale,
       locale_data: {},
-    };
-    resolvedMessages.locale_data[locale] = messages;
+    }
+    resolvedMessages.locale_data[locale] = messages
   }
 
   res.render('index', {
@@ -23,7 +23,7 @@ router.get('/:locale?', (req, res, next) => {
     app: renderToString(<App locale={locale} />),
     locale,
     messages: JSON.stringify(resolvedMessages),
-  });
-});
+  })
+})
 
-module.exports = router;
+module.exports = router

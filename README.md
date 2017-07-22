@@ -10,8 +10,7 @@ Demonstrates how [react-translations](https://www.npmjs.com/package/react-transl
 
 ## Setup
 ```
-npm run import-strings
-npm run build
+npm install & npm run import-strings & npm run build
 ```
 
 ## Run
@@ -22,4 +21,6 @@ DEBUG=react-translations npm run start
 ## View
 ```
 localhost:3000
+localhost:3000/en-US
+localhost:3000/fr
 ```
