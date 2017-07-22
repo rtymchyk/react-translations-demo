@@ -1,29 +1,22 @@
-import express from 'express'
-import { renderToString } from 'react-dom/server'
 import React from 'react'
-import App from '../src/components/App'
+import { renderToString } from 'react-dom/server'
 import { _ } from 'react-translations'
 
-const router = express.Router()
+import ServerRouter from '../src/components/ServerRouter'
 
-router.get('/:locale?', (req, res, next) => {
+export default function (req, res) {
   const { locale, messages } = req
 
-  let resolvedMessages = {}
+  let messagesForLocale = {}
   if (locale !== 'en-US') {
-    resolvedMessages = {
-      domain: locale,
-      locale_data: {},
-    }
-    resolvedMessages.locale_data[locale] = messages
+    messagesForLocale = { domain: locale, locale_data: {} }
+    messagesForLocale.locale_data[locale] = messages
   }
 
-  res.render('index', {
+  return res.render('index', {
     title: _('This is a title!')(locale),
-    app: renderToString(<App locale={locale} />),
+    app: renderToString(<ServerRouter location={req.url} context={{}} locale={locale}/>),
+    messages: JSON.stringify(messagesForLocale),
     locale,
-    messages: JSON.stringify(resolvedMessages),
   })
-})
-
-module.exports = router
+}

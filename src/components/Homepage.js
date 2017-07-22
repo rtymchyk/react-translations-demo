@@ -2,8 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { _, Message } from 'react-translations'
 
-const Homepage = (props, { locale }) => {
-  function onLocaleSwitch () {
+export default function Homepage ({ locale }) {
+  function handleButtonClick () {
+    /**
+     * If you are wondering why this is a hard refresh, it's because 
+     * clients are only served the translations they need (for the language
+     * they originally requested the page in). So, dynamic locale
+     * changing is not supported! This is an optimization to prevent
+     * clients from getting insanely huge sets of messages that they will
+     * potentially never use.
+     */
     window.location.href = locale === 'en-US' ? '/fr' : '/en-US'
   }
 
@@ -31,7 +39,7 @@ const Homepage = (props, { locale }) => {
       <Message i18n={_('Hey {name}!')} name="Bob" />
 
       <button
-        onClick={onLocaleSwitch}
+        onClick={handleButtonClick}
         id="locale-button">
         {locale === 'en-US' ? '→ fr' : '→ en-US'}
       </button>
@@ -42,5 +50,3 @@ const Homepage = (props, { locale }) => {
 Homepage.contextTypes = {
   locale: PropTypes.string.isRequired,
 }
-
-export default Homepage
