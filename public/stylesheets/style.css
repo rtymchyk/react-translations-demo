@@ -11,6 +11,16 @@ body {
 #locale-button {
   font-size: 40px;
   margin: 50px 0 50px 0;
+  outline: none;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+#locale-button:hover {
+  border-color: tomato;
+  color: tomato;
 }
 
 span.localized-string {

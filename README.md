@@ -25,6 +25,4 @@ DEBUG=react-translations npm run start
 ## View
 ```
 localhost:3000
-localhost:3000/en-US
-localhost:3000/fr
 ```
