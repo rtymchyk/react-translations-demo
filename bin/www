@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var app = require('../app');
-var debug = require('debug')('react-translation');
+var debug = require('debug')('react-translations');
 var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
