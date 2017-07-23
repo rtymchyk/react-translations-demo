@@ -20,7 +20,7 @@ npm install & npm run import-strings & npm run build
 
 ## Run
 ```
-DEBUG=react-translations npm run start
+DEBUG=react-translations npm start
 ```
 
 ## View

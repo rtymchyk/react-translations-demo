@@ -8,7 +8,7 @@ import Homepage from './Homepage'
 export default function App ({ locale }) {
   return (
     <LocaleProvider locale={locale}>
-      <Route path="/:locale?" component={Homepage}/>
+      <Route path="/:locale" component={Homepage}/>
     </LocaleProvider>
   )
 }

@@ -7,16 +7,13 @@ import ServerRouter from '../src/components/ServerRouter'
 export default function (req, res) {
   const { locale, messages } = req
 
-  let messagesForLocale = {}
-  if (locale !== 'en-US') {
-    messagesForLocale = { domain: locale, locale_data: {} }
-    messagesForLocale.locale_data[locale] = messages
-  }
-
-  return res.render('index', {
+  res.render('index', {
+    // (*) Uses locale of request to generate a title 
     title: _('This is a title!')(locale),
+    // (*) Passes down locale of request to the React tree to be used by LocaleProvider
     app: renderToString(<ServerRouter location={req.url} context={{}} locale={locale}/>),
-    messages: JSON.stringify(messagesForLocale),
+    // (*) Uses messages of request to render into body for client to rehydrate
+    messages: JSON.stringify(messages),
     locale,
   })
 }

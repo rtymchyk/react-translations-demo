@@ -1,19 +1,23 @@
-const messages = require('../initializers/messages').default
+import messages from '../initializers/messages'
+
+const DEFAULT_LOCALE = 'en-US'
+export const ALLOWED_LOCALES = ['en-US', 'fr']
 
 export default function (req, res, next) {
-  const DEFAULT_LOCALE = 'en-US'
-  const ALLOWED_LOCALES = ['en-US', 'fr']
-  const path = req.path
+  const resolvedLocale = ALLOWED_LOCALES.find(locale => (
+    req.path.startsWith(`/${locale}`)
+  )) || DEFAULT_LOCALE
 
-  ALLOWED_LOCALES.forEach((locale) => {
-    if (path.startsWith(`/${locale}`)) {
-      req.locale = locale
-      req.messages = messages().locale_data[locale]
-      next()
-    }
-  })
+  // (*) Sets locale of the request
+  req.locale = resolvedLocale
 
-  req.locale = DEFAULT_LOCALE
-  req.messages = messages().locale_data[DEFAULT_LOCALE]
+  // (*) Sets messages for that locale, to be used
+  // when rendering the HTML page for client
+  req.messages = {}
+  if (resolvedLocale !== 'en-US') {
+    req.messages = { domain: resolvedLocale, locale_data: {} }
+    req.messages.locale_data[resolvedLocale] = messages().locale_data[resolvedLocale]
+  }
+
   next()
 }

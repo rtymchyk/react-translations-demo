@@ -11,7 +11,7 @@ gulp.task('extract-strings', () => {
       plugins: ['syntax-jsx', ['babel-extract-gettext', {
         outputFile: 'locales/en-US.po',
         includeReference: true,
-        baseDir: '/Users/rtymchyk/react-translations-demo',
+        baseDir: __dirname,
         headers: {
           'po-revision-date': new Date().toISOString(),
         },

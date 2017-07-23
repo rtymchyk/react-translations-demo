@@ -9,13 +9,17 @@ body {
 }
 
 .locale-button {
-  font-size: 40px;
-  margin: 50px 0 50px 0;
+  font-size: 30px;
+  margin-top: 30px;
   outline: none;
   border: 2px solid black;
   background-color: white;
   border-radius: 6px;
   padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .locale-button:hover {
@@ -26,7 +30,11 @@ body {
 span.localized-string {
   width: 100%;
   display: block;
-  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
 }
 
 a {

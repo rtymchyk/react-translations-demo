@@ -3,30 +3,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "Language: fr\n"
-"PO-Revision-Date: 2017-03-05T20:48:34.717Z\n"
-
-#: src/components/Homepage.js
-msgid "react-translations Demo"
-msgstr "react-translations Démo"
-
-#: src/components/Homepage.js
-msgid "You have one cat!"
-msgid_plural "You have {numCats} cats!"
-msgstr[0] "Vous avez un chat!"
-msgstr[1] "Vous avez {numCats} chats!"
-
-#: src/components/Homepage.js
-msgid "Hey {name}!"
-msgstr "Salut {name}!"
-
-#: src/routes/index.js
-msgid "This is a title!"
-msgstr "C'est un titre!"
-
-#: src/components/Homepage.js
-msgctxt "Homepage"
-msgid "Hello World!"
-msgstr "Bonjour le monde!"
+"PO-Revision-Date: 2017-07-23T03:11:44.946Z\n"
 
 #: src/components/Homepage.js
 #. Here's a comment for the translator
@@ -35,3 +12,34 @@ msgid "You have {numCats} car!"
 msgid_plural "You have {numCats} cars!"
 msgstr[0] "Vous avez {numCats} voiture!"
 msgstr[1] "Vous avez {numCats} voitures!"
+
+#: src/components/Homepage.js
+msgctxt "Homepage"
+msgid "Hello World!"
+msgstr "Bonjour le monde!"
+
+#: src/components/Homepage.js
+msgid "Hey {name}!"
+msgstr "Salut {name}!"
+
+#: src/components/Homepage.js
+msgid "🌍 react-translations 🌍 Demo"
+msgstr "🌍 react-translations 🌍 Démo"
+
+#: src/components/Homepage.js
+msgid "You have one cat!"
+msgid_plural "You have {numCats} cats!"
+msgstr[0] "Vous avez un chat!"
+msgstr[1] "Vous avez {numCats} chats!"
+
+#: src/components/Homepage.js
+msgid "More Examples"
+msgstr "Plus d'exemples"
+
+#: src/components/Homepage.js
+msgid "Less Examples"
+msgstr "Moins d'exemples"
+
+#: routes/index.js
+msgid "This is a title!"
+msgstr "C'est un titre!"

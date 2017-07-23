@@ -3,10 +3,27 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2017-07-22T20:05:27.678Z\n"
+"PO-Revision-Date: 2017-07-23T03:11:44.946Z\n"
 
 #: src/components/Homepage.js
-msgid "react-translations Demo"
+#. Here's a comment for the translator
+msgctxt "Homepage"
+msgid "You have {numCats} car!"
+msgid_plural "You have {numCats} cars!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/Homepage.js
+msgctxt "Homepage"
+msgid "Hello World!"
+msgstr ""
+
+#: src/components/Homepage.js
+msgid "Hey {name}!"
+msgstr ""
+
+#: src/components/Homepage.js
+msgid "🌍 react-translations 🌍 Demo"
 msgstr ""
 
 #: src/components/Homepage.js
@@ -16,22 +33,13 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: src/components/Homepage.js
-msgid "Hey {name}!"
+msgid "More Examples"
+msgstr ""
+
+#: src/components/Homepage.js
+msgid "Less Examples"
 msgstr ""
 
 #: routes/index.js
 msgid "This is a title!"
 msgstr ""
-
-#: src/components/Homepage.js
-msgctxt "Homepage"
-msgid "Hello World!"
-msgstr ""
-
-#: src/components/Homepage.js
-#. Here's a comment for the translator
-msgctxt "Homepage"
-msgid "You have {numCats} car!"
-msgid_plural "You have {numCats} cars!"
-msgstr[0] ""
-msgstr[1] ""
