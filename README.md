@@ -5,13 +5,16 @@ Demonstrates how [react-translations](https://www.npmjs.com/package/react-transl
 
 
 ## Demonstrations
-* Gulp task for extraction of strings to a `PO`
-* Gulp task for converting updated `PO` into `JSON` to be served to web clients
-* Basic locale detection middleware
-* Middleware that determines what language of messages the client requires
-* Server loading of translations for server rendering
+*(react-translations)*
+* The use of different APIs
+* Server loading of translations for server rendering on boot
 * Client rehydration of translations for client rendering
-* The use of different APIs from `react-translations`
+* Basic locale detection middleware
+* Middleware that determines which translations to pass to client for rehydration
+
+*(babel-extract-gettext)*
+* Gulp task for extraction of strings to a `PO`
+* Gulp task for converting a `PO` into `JSON` to be used with react-translations
 
 ## Setup
 ```
