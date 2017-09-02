@@ -8,7 +8,7 @@ const JED_FORMAT = 'jed1.x'
 gulp.task('extract-strings', () => {
   return gulp.src(['src/components/*.js', 'routes/*.js'])
     .pipe(babel({
-      plugins: ['syntax-jsx', ['babel-extract-gettext', {
+      plugins: ['syntax-jsx', ['extract-text', {
         outputFile: 'locales/en-US.po',
         includeReference: true,
         baseDir: __dirname,
