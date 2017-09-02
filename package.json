@@ -11,8 +11,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "babel-extract-gettext": "^0.2.1",
-    "babel-plugin-syntax-jsx": "^6.18.0",
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "^4.15.3",
@@ -25,8 +23,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-extract-gettext": "^0.2.1",
     "babel-loader": "^7.1.1",
+    "babel-plugin-extract-text": "^0.2.2",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
