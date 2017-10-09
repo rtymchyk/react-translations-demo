@@ -3,7 +3,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2017-09-02T22:42:04.454Z\n"
+"PO-Revision-Date: 2017-10-09T17:29:01.324Z\n"
 
 #: src/components/Homepage.js
 #. Here's a comment for the translator
