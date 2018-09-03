@@ -8,7 +8,7 @@ export default function (req, res) {
   const { locale, messages } = req
 
   res.render('index', {
-    // (*) Uses locale of request to generate a title 
+    // (*) Uses locale of request to generate the page title
     title: _('This is a title!')(locale),
     // (*) Passes down locale of request to the React tree to be used by LocaleProvider
     app: renderToString(<ServerRouter location={req.url} context={{}} locale={locale}/>),

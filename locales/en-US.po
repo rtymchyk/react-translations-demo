@@ -1,12 +1,18 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-09-02T16:26:02.927Z\n"
+"Last-Translator: \n"
 "Language: en_US\n"
-"PO-Revision-Date: 2017-10-09T17:29:01.324Z\n"
+"Language-Team: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: src/components/Homepage.js
 #. Here's a comment for the translator
+#: src/components/Homepage.js
 msgctxt "Homepage"
 msgid "You have {numCats} car!"
 msgid_plural "You have {numCats} cars!"

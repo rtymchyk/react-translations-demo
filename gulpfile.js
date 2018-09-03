@@ -1,17 +1,18 @@
 const gulp = require('gulp')
 const babel = require('gulp-babel')
 const po2json = require('gulp-po2json')
+const concat = require('gulp-concat-po')
 
 const LOCALES_DIR = 'locales/'
 const JED_FORMAT = 'jed1.x'
 
-gulp.task('extract-strings', () => {
+gulp.task('extract-individual', () => {
   return gulp.src(['src/components/*.js', 'routes/*.js'])
     .pipe(babel({
       plugins: ['syntax-jsx', ['extract-text', {
-        outputFile: 'locales/en-US.po',
         includeReference: true,
-        baseDir: __dirname,
+        baseReferenceDir: __dirname,
+        outputDir: 'locales/working',
         headers: {
           'po-revision-date': new Date().toISOString(),
         },
@@ -19,10 +20,13 @@ gulp.task('extract-strings', () => {
           name: 'Message',
         },
       }]],
-    })
-      .on('error', (err) => {
-        console.error(err)
-      }))
+    }))
+})
+
+gulp.task('extract', ['extract-individual'], () => {
+  return gulp.src('locales/working/*.js.po')
+    .pipe(concat('en-US.po'))
+    .pipe(gulp.dest('locales'))
 })
 
 gulp.task('import-fr', () => {
@@ -37,4 +41,4 @@ gulp.task('import-en-US', () => {
     .pipe(gulp.dest(LOCALES_DIR))
 })
 
-gulp.task('import-strings', ['import-en-US', 'import-fr'])
+gulp.task('import', ['import-en-US', 'import-fr'])
