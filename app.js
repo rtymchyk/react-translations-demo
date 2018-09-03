@@ -14,7 +14,7 @@ setMessages(messages()) // (*) Loads translation JSON files
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.use(logger('dev'))
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'dist', 'public')))
 
 app.use(localizer) // (*) Middleware that sets information on the 'req' object
 app.get('/', (req, res, next) => { res.redirect('/en-US') })

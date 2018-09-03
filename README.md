@@ -16,17 +16,18 @@ Demonstrates how [react-translations](https://www.npmjs.com/package/react-transl
 * Gulp task for extraction of strings to a `PO`
 * Gulp task for converting a `PO` into `JSON` to be used with react-translations
 
-## Setup
+## Quick Setup
 ```
-npm install & npm run import-strings & npm run build
-```
-
-## Run
-```
-DEBUG=react-translations npm start
+yarn install & yarn run import & yarn run build
 ```
 
-## View
+## Start Server
 ```
-localhost:3000
+yarn start
 ```
+
+## Extract
+```
+yarn run export
+```
+

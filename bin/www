@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-require('babel-register')
+require('@babel/register')
 var app = require('../app').default;
-var debug = require('debug')('react-translations');
 var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
@@ -54,5 +53,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on ' + bind)
 }
