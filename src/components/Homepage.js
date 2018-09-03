@@ -23,7 +23,7 @@ function MoreExamples () {
 export default function Homepage ({ match, location, history }, { locale }) {
   function handleLocaleClick () {
     /**
-     * If you are wondering why this is a hard refresh, it's because 
+     * If you are wondering why this is a hard refresh, it's because
      * clients are only served the translations they need (for the language
      * they originally requested the page in). So, dynamic locale
      * changing is not supported. This is an optimization to prevent

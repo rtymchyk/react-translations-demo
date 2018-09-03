@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  mode: 'production',
   entry: {
     app: './entries/app.js',
   },
@@ -10,7 +11,6 @@ module.exports = {
   resolve: {
     modules: ['node_modules', path.resolve(__dirname, 'src')],
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {

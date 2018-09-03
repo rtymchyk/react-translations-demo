@@ -1,6 +1,6 @@
 locales/working
 locales/*.json
-public/javascripts/app.js
+dist/public/javascripts/app.js
 .vscode
 logs
 *.log
