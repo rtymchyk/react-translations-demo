@@ -9,7 +9,7 @@ const JED_FORMAT = 'jed1.x'
 gulp.task('extract-individual', () => {
   return gulp.src(['src/components/*.js', 'routes/*.js'])
     .pipe(babel({
-      plugins: ['syntax-jsx', ['extract-text', {
+      plugins: ['@babel/syntax-jsx', ['extract-text', {
         includeReference: true,
         baseReferenceDir: __dirname,
         outputDir: 'locales/working',

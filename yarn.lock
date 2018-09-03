@@ -930,9 +930,11 @@ babel-loader@^8.0.2:
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
 
-babel-plugin-extract@^1.0.0:
+babel-plugin-extract-text@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-extract/-/babel-plugin-extract-1.0.0.tgz#46cf675b76120e45a4801451131e37704b6d672c"
+  resolved "https://registry.yarnpkg.com/babel-plugin-extract-text/-/babel-plugin-extract-text-1.0.0.tgz#5245a1e9a05dabf288d3bff6dc03ac78fa0dfa53"
+  dependencies:
+    gettext-parser "^2.0.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -1612,7 +1614,7 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
 
-encoding@^0.1.11:
+encoding@^0.1.11, encoding@^0.1.12:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
   dependencies:
@@ -2178,6 +2180,13 @@ gettext-parser@1.1.0:
   resolved "https://registry.yarnpkg.com/gettext-parser/-/gettext-parser-1.1.0.tgz#2c5a6638d893934b9b55037d0ad82cb7004b2679"
   dependencies:
     encoding "^0.1.11"
+
+gettext-parser@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gettext-parser/-/gettext-parser-2.0.0.tgz#c28bb31e61f76f14665dfafbb5c0518cdc1270ed"
+  dependencies:
+    encoding "^0.1.12"
+    safe-buffer "^5.1.2"
 
 glob-parent@^3.1.0:
   version "3.1.0"
