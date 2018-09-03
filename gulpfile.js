@@ -2,11 +2,14 @@ const gulp = require('gulp')
 const babel = require('gulp-babel')
 const po2json = require('gulp-po2json')
 const concat = require('gulp-concat-po')
+const del = require('del')
 
 const LOCALES_DIR = 'locales/'
 const JED_FORMAT = 'jed1.x'
 
 gulp.task('extract-individual', () => {
+  del(['locales/working/**/*.po'])
+
   return gulp.src(['src/components/*.js', 'routes/*.js'])
     .pipe(babel({
       plugins: ['@babel/syntax-jsx', ['extract-text', {
